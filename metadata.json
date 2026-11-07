@@ -1,0 +1,6 @@
+{
+  "name": "Navy Night Odyssey",
+  "description": "A calm celestial journey through the navy night sky with interactive constellations, starlight challenges, and surprises.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

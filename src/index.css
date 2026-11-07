@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #050B1F;
+    color: #F0F6FC;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
+  
+  h1, h2, h3, .font-display {
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Custom glowing effects */
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.45), 0 0 40px rgba(0, 240, 255, 0.2);
+}
+
+.glow-gold {
+  box-shadow: 0 0 20px rgba(245, 197, 66, 0.45), 0 0 40px rgba(245, 197, 66, 0.2);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 12px rgba(0, 240, 255, 0.6);
+}
+
+.text-glow-gold {
+  text-shadow: 0 0 12px rgba(245, 197, 66, 0.6);
+}
+
+/* Star drifting animation */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.25; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+
+.animate-twinkle {
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+/* Comet streak animation */
+@keyframes cometFlight {
+  0% {
+    transform: translate(-100px, -100px) rotate(45deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(100vw + 100px), calc(100vh + 100px)) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+.animate-comet {
+  animation: cometFlight 3.8s linear forwards;
+}
